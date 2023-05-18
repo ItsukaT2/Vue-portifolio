@@ -25,7 +25,7 @@ import { RouterLink, RouterView } from 'vue-router'
           </div>
           <div class="project-tile">
 
-            <img src="" alt="projectimg2" />
+            <img src="../imgs/buttons.png" alt="projectimg2" />
             <div class="overlay">
               <div class="project-description">
                 <h3>Buttons</h3>
@@ -95,7 +95,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
   <div class="project-tile">
 
-      <img src="" alt="projectimg7" />
+      <img src="../imgs/logins.png" alt="projectimg7" />
       <div class="overlay">
       <div class="project-description">
       <h3>Logins Froms</h3>

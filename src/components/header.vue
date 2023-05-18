@@ -4,11 +4,18 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
 <header>
-
+  <div class="logo">
+    <RouterLink class="link" to="/">LOGO</RouterLink>  
+  </div>
       <nav>
         <RouterLink class="link" to="/">Home</RouterLink>
         <RouterLink class="link" to="/projects">Projects</RouterLink>
         <RouterLink class="link" to="/curriculum">Curriculum</RouterLink>
+      
+        <!--
+        <button @click='$language = "pt"'>PT</button>
+        <button @click='$language = "en"'>EN</button>
+        -->
       </nav>
 
   </header>
@@ -23,19 +30,26 @@ header {
   position: fixed;
   width: 100%;
   z-index: 10000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
 }
+
+.logo {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 0;
+  float: left;
+  padding: 25px 10px;
+}
+
 
 nav {
   font-size: 12px;
   text-align: center;
   margin-top: 0;
-  
+  float: right;
   padding: 20px 10px;
 }
-nav .link {
+ .link {
   color: #fff;
   text-align: center;
   padding: 12px;
@@ -45,11 +59,11 @@ nav .link {
   border-radius: 4px;
 }
 
-nav .link:hover {
+ .link:hover {
   background-color: #ddd;
   color: black;
 }
-nav .link:active {
+ .link:active {
   background-color: #e60000;
   color: black;
 }

@@ -4,10 +4,12 @@
     <section>
         <div class="lang">
         <RouterLink class="language" to="/EN">English</RouterLink>
-        <RouterLink class="language" to="/JP">Japanese</RouterLink>
+        <RouterLink class="language" to="/JP">Japanese (日本語)</RouterLink>
     </div>
     <br>
-        <article>
+
+    <article>
+      <div></div>
             <h3 style="--i:6;">Olá, meu nome é</h3>
       <h2>Thomas Kenzo Matsuta</h2>
       <h3 style="--i:8;">Um <span class="typed-text">{{ typeValue }}</span>
@@ -22,7 +24,7 @@
           vitae repellat eius! Quam quibusdam possimus 
           modi impedit quia nesciunt.
       </p>
-        </article>
+    </article>
         <div class="img">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/2048px-Default_pfp.svg.png" alt=""></div>
     </section>
@@ -38,17 +40,17 @@ export default {
     return {
       typeValue: "",
       typeStatus: false,
-      displayTextArray: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
-      typingSpeed: 100,
-      erasingSpeed: 100,
-      newTextDelay: 2000,
+      displayTextArray: ["YouTuber", "Developer", "Gamer", "Otaku"],
+      typingSpeed: 70,
+      erasingSpeed: 50,
+      newTextDelay: 700,
       displayTextArrayIndex: 0,
       charIndex: 0,
     };
   },
   props: {},
   created() {
-    setTimeout(this.typeText, this.newTextDelay + 200);
+    setTimeout(this.typeText, this.newTextDelay + 100);
   },
   methods: {
     typeText() {
@@ -78,7 +80,7 @@ export default {
         this.displayTextArrayIndex += 1;
         if (this.displayTextArrayIndex >= this.displayTextArray.length)
           this.displayTextArrayIndex = 0;
-        setTimeout(this.typeText, this.typingSpeed + 1000);
+        setTimeout(this.typeText, this.typingSpeed + 500);
       }
     },
   },
@@ -88,13 +90,13 @@ export default {
 
 <style lang="scss" scoped>
 .blinking-cursor {
-  font-size: 6rem;
-  color: #2c3e50;
-  -webkit-animation: 1s blink step-end infinite;
-  -moz-animation: 1s blink step-end infinite;
-  -ms-animation: 1s blink step-end infinite;
-  -o-animation: 1s blink step-end infinite;
-  animation: 1s blink step-end infinite;
+  font-size: 1rem;
+  color: #ffffff;
+  -webkit-animation: 0.7s blink step-end infinite;
+  -moz-animation: 0.7s blink step-end infinite;
+  -ms-animation: 0.7s blink step-end infinite;
+  -o-animation: 0.7s blink step-end infinite;
+  animation: 0.7s blink step-end infinite;
 }
 @keyframes blink {
   from,
@@ -102,7 +104,7 @@ export default {
     color: transparent;
   }
   50% {
-    color: #2c3e50;
+    color: #ffffff;
   }
 }
 @-moz-keyframes blink {
@@ -111,7 +113,7 @@ export default {
     color: transparent;
   }
   50% {
-    color: #2c3e50;
+    color: #ffffff;
   }
 }
 @-webkit-keyframes blink {
@@ -120,7 +122,7 @@ export default {
     color: transparent;
   }
   50% {
-    color: #2c3e50;
+    color: #ffffff;
   }
 }
 @-ms-keyframes blink {
@@ -129,7 +131,7 @@ export default {
     color: transparent;
   }
   50% {
-    color: #2c3e50;
+    color: #ffffff;
   }
 }
 @-o-keyframes blink {
@@ -138,22 +140,24 @@ export default {
     color: transparent;
   }
   50% {
-    color: #2c3e50;
+    color: #ffffff;
   }
 }
 </style>
 
 <style scoped>
 .lang {
-    top: -200px;
-    left: 73%;
+  position: fixed;
+    top: 150px;
+    right: 100px;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-bottom: 0px;
     opacity: 0;
-  animation: slideLeft 1s ease forwards 0.7s;
-  color: transparent;
-  transition: .1s;
+    animation: slideLeft 1s ease forwards 0.7s;
+    color: transparent;
+    transition: .1s;
 }
 
 .lang .language {
@@ -168,12 +172,17 @@ export default {
  transform: scale(1.2);
 }
 
-section{
-  top: 150px;
-  margin-left: 1%;
-  margin-right: 3%;
-  display: flex;
+article {
+  justify-content: center;
   align-items: center;
+}
+
+section{
+  top: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 section h2{
@@ -202,16 +211,18 @@ section img{
   max-width: 300px;    
   max-height: 300px;
   opacity: 0;
-  left: 10px;
   animation: slideTop 1s ease forwards 0.5s;
 }
 
 section .img{
    animation: animate 3s ease-in-out infinite 1s; 
+   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
-section span a{
+.typed-text{
   color: rgb(255, 0, 0);
   text-decoration: none;
   transition: .3s;
