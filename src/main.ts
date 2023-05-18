@@ -11,7 +11,7 @@ import Toasted from 'vue-toasted';
 
 
 //@ts-ignore
-import Clipboard from "v-clipboard"
+//import Clipboard from "v-clipboard"
 
 
 import router from './router'
@@ -25,7 +25,7 @@ const app = createApp(App)
 
 //app.component('fa', FontAwesomeIcon)
 
-app.use(Clipboard)
+//app.use(Clipboard)
 
 //app.use(Toasted)
 
