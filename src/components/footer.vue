@@ -6,11 +6,11 @@
 <footer>
   <h3>Find me in: </h3>
     <div class="socials">
-        <a href="https://www.youtube.com/channel/UCLydYepr5Qj2GTOFBrdH_3Q" target="_blank" style="--clr:#ff0000;" class="fa-brands fa-brands fa-youtube" id="profile-link"><fa :icon="['fab', 'youtube']"></fa></a> 
-        <a href="https://github.com/ItsukaT2" target="_blank" style="--clr:#fff;" class="fa-brands fa-github"><fa :icon="['fab', 'github']"></fa></a>
-        <a href="https://steamcommunity.com/id/perfildealguem/" target="_blank" style="--clr:#2a475e;" class="fa-brands fa-brands fa-steam"><fa :icon="['fab', 'steam']"></fa></a>
+        <a href="https://www.youtube.com/channel/UCLydYepr5Qj2GTOFBrdH_3Q" target="_blank" style="--clr:#ff0000;" class="fa-brands fa-brands fa-youtube" id="profile-link"><fa :icon="['fab', 'youtube']">youtube</fa></a> 
+        <a href="https://github.com/ItsukaT2" target="_blank" style="--clr:#fff;" class="fa-brands fa-github"><fa :icon="['fab', 'github']">github</fa></a>
+        <a href="https://steamcommunity.com/id/perfildealguem/" target="_blank" style="--clr:#2a475e;" class="fa-brands fa-brands fa-steam"><fa :icon="['fab', 'steam']">steam</fa></a>
         
-        <a target="_blank" style="--clr:#7289da;" class="fa-brands fa-brands fa-steam" v-clipboard="disc"><fa :icon="['fab', 'discord']"></fa></a>
+        <a target="_blank" style="--clr:#7289da;" class="fa-brands fa-brands fa-steam" v-clipboard="disc"><fa :icon="['fab', 'discord']">discord</fa></a>
 
       </div>
 </footer>
@@ -23,7 +23,7 @@ export default {
   name: "App",
   data() {
     return {
-      disc: "#8122",
+      disc: "Itsuka#8122",
     };
   },
 };
